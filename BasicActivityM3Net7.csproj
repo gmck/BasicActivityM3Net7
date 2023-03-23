@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>26</SupportedOSPlatformVersion>
+		<OutputType>Exe</OutputType>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<ApplicationId>com.companyname.basicactivitym3net7</ApplicationId>
+		<ApplicationVersion>1</ApplicationVersion>
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<RootNamespace>com.companyname.basicactivitym3net7</RootNamespace>
+		<RuntimeIdentifiers Condition=" '$(Configuration)' == 'Release' ">android-arm;android-arm64</RuntimeIdentifiers>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+		<AndroidLinkTool>r8</AndroidLinkTool>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="Resources\layout\activity_main.xml" />
+	  <None Remove="Resources\layout\content_main.xml" />
+	  <None Remove="Resources\layout\fragment_first.xml" />
+	  <None Remove="Resources\layout\fragment_second.xml" />
+	  <None Remove="Resources\navigation\nav_graph.xml" />
+	  <None Remove="Resources\values-land\dimens.xml" />
+	  <None Remove="Resources\values-night\themes.xml" />
+	  <None Remove="Resources\values-v29\themes.xml" />
+	  <None Remove="Resources\values-w1440dp\dimens.xml" />
+	  <None Remove="Resources\values-w600dp\dimens.xml" />
+	  <None Remove="Resources\values\colors.xml" />
+	  <None Remove="Resources\values\dimens.xml" />
+	  <None Remove="Resources\values\strings.xml" />
+	  <None Remove="Resources\values\themes.xml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.6.0.1" />
+	  <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.3" />
+	  <PackageReference Include="Xamarin.AndroidX.Navigation.Fragment" Version="2.5.3" />
+	  <PackageReference Include="Xamarin.AndroidX.Navigation.UI" Version="2.5.3" />
+	  <PackageReference Include="Xamarin.Google.Android.Material" Version="1.8.0" />
+	</ItemGroup>
+</Project>
